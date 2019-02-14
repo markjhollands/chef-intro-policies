@@ -15,3 +15,7 @@ cookbook 'audit_agr', git: 'https://github.com/anthonygrees/audit_agr.git'
 
 # run_list: chef-client will run these recipes in the order specified.
 run_list 'audit_agr', 'chef-client'
+
+# Override the Chef Client cookbook with the following attributes
+override['chef_client']['interval']    = '200'
+override['chef_client']['splay']       = '30'

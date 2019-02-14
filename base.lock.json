@@ -1,5 +1,5 @@
 {
-  "revision_id": "890618e3e78026ebe8ee9620e7bd2a7e386712891d44cde24629729530330004",
+  "revision_id": "d0e8f6133130fdb72d5b6e0798dcbef0aa64167a23dad0fb148a8ddf6380f2a1",
   "name": "base",
   "run_list": [
     "recipe[audit_agr::default]",
@@ -80,7 +80,10 @@
 
   },
   "override_attributes": {
-
+    "chef_client": {
+      "interval": "200",
+      "splay": "30"
+    }
   },
   "solution_dependencies": {
     "Policyfile": [
